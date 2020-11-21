@@ -39,3 +39,11 @@ function countUpAndDown(n) {
     }
   }
 
+  //BIG O, O(1)
+  //n increases each time until it reaches 10, after that you have the same amount of steps until infinity therefore you generalize as O(1)
+  function logAtMost10(n) {
+    for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+    }
+}
+
