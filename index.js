@@ -1,4 +1,5 @@
-//BIG O
+//BIG O, 
+//1 addition in a loop n times (n additions), n assignments as you do total +=, i++ scales with n, total = 0 is one assingment, i = 1 is 1 assignment, i <=n is n comparisons
 function addUpTo(n){
     let total = 0;
     for (let i = 0; i <=n; i ++){
@@ -9,6 +10,7 @@ function addUpTo(n){
 console.log(addUpTo(6))
 
 //BIG O
+//1 multiplication, 1 addition, 1 division = 3 operations, this will always be the case regardless of the size of n
 function addUpTo(n){
     return n * (n+1) / 2
 }
