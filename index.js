@@ -29,5 +29,13 @@ function countUpAndDown(n) {
     }
     console.log("Back down. Bye!");
   }
-
   
+  //BIG 0, f(n)= n^2, O(n^2)
+  function printAllPairs(n) {
+    for (var i = 0; i < n; i++) {
+      for (var j = 0; j < n; j++) {
+        console.log(i, j);
+      }
+    }
+  }
+
