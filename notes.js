@@ -22,7 +22,7 @@
 //calculates the amount of space or memory the algorithm takes up
 
 //----------------------------------------------------------------------------------------------------------
-// BIG 0 OF OBJECTS (objects are typically quicker than arrays and they don't have order)
+// BIG 0 OF OBJECTS (objects are quicker than arrays and they don't have order)
 //insertion O(1)
 //removal O(1)
 //searching O(n)
@@ -33,7 +33,7 @@
 //Object.hasOwnProperty O(1)
 
 //----------------------------------------------------------------------------------------------------------
-// BIG 0 OF ARRAYS (intrinsic order to data)
+// BIG 0 OF ARRAYS (intrinsic order to data, but much slower than objects)
 //insertion and removal .push() & .pop() O(1) because it only concerns to the end, .unshift() & .shift() O(n) because all elements have to be re-indexed
 //searching O(n)
 //access O(1)
