@@ -1,3 +1,4 @@
+//TIME COMPLEXITY IN JAVASCRIPT
 //RULES 
 //Constants don't matter
 //arithmetic operations are constant
@@ -12,7 +13,11 @@
 //O(n^2 +8) should be written as O(n^2)
 //O(n^2 + 5n + 8) should be written as O(n^2)
 
+
+//----------------------------------------------------------------------------------------------------------
 //SPACE COMPLEXITY IN JAVASCRIPT
 //most primitives (booleans, numbers, undefined, null), are constant space
 //strings require O(n) space where n is the string length
 //reference types are generally O(n) where n is the length (for arrays) or the number of keys (for objects)
+//calculates the amount of space or memory the algorithm takes up
+

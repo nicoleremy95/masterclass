@@ -1,3 +1,5 @@
+//TIME COMPLEXITY
+
 //BIG O, f(n)=n,  O(n)
 //1 addition in a loop n times (n additions), n assignments as you do total +=, i++ scales with n, total = 0 is one assingment, i = 1 is 1 assignment, i <=n is n comparisons
 function addUpTo(n){
@@ -48,6 +50,28 @@ function countUpAndDown(n) {
 }
 
 //BIG 0, O(n^2)
+function subtotals(array) {
+    var subtotalArray = Array(array.length);
+    for (var i = 0; i < array.length; i++) {
+        var subtotal = 0;
+        for (var j = 0; j <= i; j++) {
+            subtotal += array[j];
+        }
+        subtotalArray[i] = subtotal;
+    }
+    return subtotalArray;
+}
+
+//----------------------------------------------------------------------------------------------------------
+//SPACE COMPLEXITY
+//BIG 0, O(1)
+function logAtMost10(n) {
+    for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+    }
+}
+
+//BIG 0, O(n)
 function subtotals(array) {
     var subtotalArray = Array(array.length);
     for (var i = 0; i < array.length; i++) {
