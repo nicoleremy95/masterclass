@@ -34,3 +34,16 @@
 
 //----------------------------------------------------------------------------------------------------------
 // BIG 0 OF ARRAYS (intrinsic order to data)
+//insertion and removal .push() & .pop() O(1) because it only concerns to the end, .unshift() & .shift() O(n) because all elements have to be re-indexed
+//searching O(n)
+//access O(1)
+
+//.push() O(1)
+//.pop() O(1)
+//.shift() O(n)
+//.unshift() O(n)
+//.concant() O(n)
+//.slice() O(n)
+//.splice() O(n)
+//.sort() O(n * log n)
+//.forEach/map/filter/reduce/etc. O(n)
