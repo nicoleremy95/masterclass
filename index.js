@@ -94,3 +94,10 @@ function onlyElementsAtEvenIndex(array) {
     }
     return newArray;
 }
+
+//BIG 0, O(1)
+function logUpTo(n) {
+    for (var i = 1; i <= n; i++) {
+        console.log(i);
+    }
+}
