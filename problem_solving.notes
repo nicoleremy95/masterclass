@@ -18,3 +18,66 @@ STEP 1: UNDERSTANDING THE PROBLEM
         -string?
     4. Can the outputs be determined from the inputs? 
     5. How should I label the important pieces of the data that are a part of the problem?
+
+STEP 2: CONCRETE PROBLEMS
+-explore examples
+    start with simple examples, progress to more complex examples, explore examples with empty inputs, explore examples with invalid inputs
+
+
+ex. Write a function which takes in a string and retuns counts of each character in the string
+charCount("aaa"); // {a:4}
+charCount("hello") // {h:1, e:1, l:2, o:1}
+charCount(""), what should the output be?
+charCount(), what should the output be?
+charCount("My number is 1341093"), should we could numbers?
+charCount("Hello hi"), should we count upper and lower case?
+
+STEP 3: BREAK IT DOWN
+    Explicitly write out the steps you need to take
+
+    ex. Write a function which takes in a string and retuns counts of each character in the string
+    
+    pseudo code 1
+    function charCount(str){
+       do something
+       return an object with values 
+       interviewers confirmed only alphanuemeric lower case characters
+    }
+
+    pseudo code 2
+    function charCount(str){
+       make object to return at end
+       loop over string for each character... 
+            if the char is a num/letter AND is a key in object, add 1 to count. 
+            if the char is a num/letter AND is not in object, add it and set value to 1
+            if cahr is something else, don't do anything
+       return an object with values 
+    }
+
+STEP 4: SOLVE OR SIMPLIFY
+1. find core difficulty to what you are tyring to do
+2. temporarily ignore that difficulty
+3. write a simplified solution
+4. incorporate that difficulty back in
+
+ex. Write a function which takes in a string and retuns counts of each character in the string
+
+    function charCount(str){
+        //make object to return at end
+        let result = {};
+        //loop over string for each character... 
+        for (let i = 0; i <str.length; i ++){
+            let char = str[i].toLowerCase();
+            //if the char is a num/letter AND is not in object, add it and set value to 1
+            if(result[char]>0) {
+                result[char]++;
+            } 
+            //if the char is a num/letter AND is not in object, add it and set value to 1
+            else {
+                result[char] = 1;
+            }
+        }
+        //return an object with values 
+        return result;
+    }
+
