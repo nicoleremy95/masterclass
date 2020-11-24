@@ -9,8 +9,18 @@ Linear Search:
                 let current = arr[i]
                 if(current === val){
                     answer = i
-                    return answer
+                    return answer;
                 } 
             }
-            return answer
+            return answer;
+        }
+
+        //refactored
+        function linearSearch(arr, val){
+            for (let i = 0; i <arr.length; i ++){
+                if(arr[i] === val){
+                    return i;
+                } 
+            }
+            return -1;
         }
