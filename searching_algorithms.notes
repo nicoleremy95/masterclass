@@ -1,8 +1,9 @@
 SEARCHING ALGORITHMS
-
+----------------------------------------------------------------------------------------------------------
 Linear Search:
     - goes through array starting at [0] down to the last index 
-    -pseudocode 
+    * example 
+        //BIG 0, O(n)
         function linearSearch(arr, val){
             let answer = -1
             for (let i = 0; i <arr.length; i ++){
@@ -15,7 +16,7 @@ Linear Search:
             return answer;
         }
 
-        //refactored
+        //refactored, BIG 0, O(n)
         function linearSearch(arr, val){
             for (let i = 0; i <arr.length; i ++){
                 if(arr[i] === val){
@@ -23,4 +24,30 @@ Linear Search:
                 } 
             }
             return -1;
+        }
+----------------------------------------------------------------------------------------------------------
+Binary Search: 
+    - only works on sorted arrays 
+    - pick a halfway point and moves goes either left or right to check next at the halfway point
+    - "divide and conquer" method
+    * example
+        //first try, 
+        function binarySearch(arr,val){
+            //set index values 
+            let start = 0
+            let end = (arr.length) -1
+            let middle = Math.floor(start + end)/2
+                    
+            for (let i = 0 ; i < arr.length; i ++){
+                if(val === arr[middle]){
+                    return middle;
+                } else if (val > arr[middle] ){
+                     start = middle + 1
+                     middle = Math.floor(start + end)/2
+                } else if (val < arr[middle] ){
+                     end = middle - 1 
+                     middle = Math.floor(start + end)/2
+                }
+            }
+            return -1
         }
