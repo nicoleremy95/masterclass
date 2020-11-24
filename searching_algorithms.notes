@@ -76,6 +76,7 @@ Binary Search:
 ----------------------------------------------------------------------------------------------------------
 NAIVE STRING SEARCH: 
     * example
+        //working code, BIG O, O(n^2)
         function stringSearch (str, pattern){
             let count = 0;
             for (let i = 0; i <str.length; i ++){
@@ -83,7 +84,7 @@ NAIVE STRING SEARCH:
                     if(str[i+j] !== pattern[j]){
                         break;
                     } else {
-                        if(j===pattern.length){
+                        if(j===pattern.length-1){
                             count++
                         }
                     }
@@ -91,3 +92,4 @@ NAIVE STRING SEARCH:
             }
             return count; 
         }
+        console.log(stringSearch("how are you are", "are"))
