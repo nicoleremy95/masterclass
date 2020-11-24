@@ -1,0 +1,16 @@
+SEARCHING ALGORITHMS
+
+Linear Search:
+    - goes through array starting at [0] down to the last index 
+    -pseudocode 
+        function linearSearch(arr, val){
+            let answer = -1
+            for (let i = 0; i <arr.length; i ++){
+                let current = arr[i]
+                if(current === val){
+                    answer = i
+                    return answer
+                } 
+            }
+            return answer
+        }
