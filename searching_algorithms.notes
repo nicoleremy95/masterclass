@@ -2,6 +2,7 @@ SEARCHING ALGORITHMS
 ----------------------------------------------------------------------------------------------------------
 Linear Search:
     - goes through array starting at [0] down to the last index 
+    - worse or average case O(n), best case O(1)
     * example 
         //BIG 0, O(n)
         function linearSearch(arr, val){
@@ -30,6 +31,7 @@ Binary Search:
     - only works on sorted arrays 
     - pick a halfway point and moves goes either left or right to check next at the halfway point
     - "divide and conquer" method
+    - best case scenario O(1), worse or average case O(log n)
     * example
         //first try, 
         function binarySearch(arr,val){
@@ -51,3 +53,22 @@ Binary Search:
             }
             return -1
         }
+
+    //working code, BIG O, O(log n)
+    function binarySearch(arr, elem) {
+        var start = 0;
+        var end = arr.length - 1;
+        var middle = Math.floor((start + end) / 2);
+        while(arr[middle] !== elem && start <= end) {
+            if(elem < arr[middle]){
+                end = middle - 1;
+            } else {
+                start = middle + 1;
+            }
+            middle = Math.floor((start + end) / 2);
+        }
+        if(arr[middle] === elem){
+            return middle;
+        }
+        return -1;
+    }
