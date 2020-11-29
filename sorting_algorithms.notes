@@ -32,32 +32,20 @@ Bubble Sort
             const swap = (arr, indx1, indx2) =>{
                 [arr[indx1], arr[indx2]] = [arr[indx2], arr[indx1]]
             }
+    
     Bubble sort pseduocode 
-    //[24,5,61,2,42,1]
-    function bubbleSort (arr){
-        for (let i = arr.length -1; i --){
-            for (let j = 0; j < arr.length; j ++){
-                if (arr[j] > arr[j+1]{
-                    swap(arr, arr[j], arr[j+1])
+        function bubbleSort(arr){
+            for (let i = arr.length; i > 0; i --){
+                // j < i -1 gives us one less comparison every time which is essential to bubble sort because you compare by one less every time
+                for(let j = 0; j < i -1; j ++){
+                    console.log(arr, arr[j], arr[j+1])
+                    if (arr[j] > arr[j+1]{
+                        let temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
                 }
+                console.log("one pass complete")
             }
+            return arr;
         }
-        return arr;
-    }
-    function bubbleSort(arr){
-        for (let i = arr.length; i > 0; i --){
-            // j < i -1 gives us one less comparison every time which is essential to bubble sort because you compare by one less every time
-            for(let j = 0; j < i -1; j ++){
-                console.log(arr, arr[j], arr[j+1])
-                if (arr[j] > arr[j+1]{
-                    let temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-            console.log("one pass complete")
-        }
-        return arr;
-    }
-    while i <= arr.length-1
-    arr.length-1
