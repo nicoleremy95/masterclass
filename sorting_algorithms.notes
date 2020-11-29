@@ -2,7 +2,7 @@ SORTING ALGORITHMS
 
 Javascript .sort() converts everything to a string first and therefore does not work well on numbers 
 
-Proper sort method on numbers ex.
+Proper sort method on numbers Ascending ex.
     function numberCompare(num1, num2) {
         return num1-num2
     }
@@ -10,5 +10,12 @@ Proper sort method on numbers ex.
     //[4,6,10,15]
 
         *if it returns a negative value, num1 comes before num2, if it returns a positive value, num2 comes before num1
+
+Compare str length longest to shortest ex.
+    function compareByLen(str1, str2){
+        return str2.length - str1.length;   
+    }
+    ["fred, "nicole", "ed", "ron"].sort(compareByLen);
+    //["nicole", "fred", "ron", "ed"]
 ----------------------------------------------------------------------------------------------------------
 Bubble Sort 
