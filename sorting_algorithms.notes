@@ -33,7 +33,7 @@ Bubble Sort
                 [arr[indx1], arr[indx2]] = [arr[indx2], arr[indx1]]
             }
     
-    Bubble sort pseduocode 
+    Bubble sort pseduocode, BIG O, O(n^2) if the array is not sorted at all, if nearly sorted then O(n)
         function bubbleSort(arr){
             //if noSwaps happen after running through the whole array, then we break out of the for loop to stop the function from running and return the arr
             let noSwaps;
