@@ -35,7 +35,10 @@ Bubble Sort
     
     Bubble sort pseduocode 
         function bubbleSort(arr){
+            //if noSwaps happen after running through the whole array, then we break out of the for loop to stop the function from running and return the arr
+            let noSwaps;
             for (let i = arr.length; i > 0; i --){
+                noSwaps = true;
                 // j < i -1 gives us one less comparison every time which is essential to bubble sort because you compare by one less every time
                 for(let j = 0; j < i -1; j ++){
                     console.log(arr, arr[j], arr[j+1])
@@ -43,9 +46,11 @@ Bubble Sort
                         let temp = arr[j];
                         arr[j] = arr[j+1];
                         arr[j+1] = temp;
+                        noSwaps= false;
                     }
                 }
                 console.log("one pass complete")
+                if(noSwaps) break;
             }
             return arr;
         }
