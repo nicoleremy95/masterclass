@@ -2,8 +2,13 @@ SORTING ALGORITHMS
 
 Javascript .sort() converts everything to a string first and therefore does not work well on numbers 
 
-function numberCompare(num1, num2) {
-    return num1-num2
-}
+Proper sort method on numbers ex.
+    function numberCompare(num1, num2) {
+        return num1-num2
+    }
+    [6,4,15,10].sort(numberCompare);
+    //[4,6,10,15]
+
+        *if it returns a negative value, num1 comes before num2, if it returns a positive value, num2 comes before num1
 ----------------------------------------------------------------------------------------------------------
 Bubble Sort 
