@@ -1,0 +1,9 @@
+SORTING ALGORITHMS
+
+Javascript .sort() converts everything to a string first and therefore does not work well on numbers 
+
+function numberCompare(num1, num2) {
+    return num1-num2
+}
+----------------------------------------------------------------------------------------------------------
+Bubble Sort 
