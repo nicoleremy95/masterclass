@@ -10,5 +10,11 @@ Trees
         -siblings: a group of nodes with the same parent
         -leaf: a node with no children
         -edge: the connection between one node and another
-    
+    - applications: 
+        1. HTML DOM (Document object model)
+        2. Network Routing 
+        3. Abstract Syntax Tree
+        4. Artificial Intelligence
+        5. Folders in an Operating system (directories on a computer, ex. Mac Finder)
+        6. JSON API data
 ----------------------------------------------------------------------------------------------------------
