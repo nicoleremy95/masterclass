@@ -1,0 +1,14 @@
+Trees
+    - a data structure that consists of nodes in a parent/child relationship
+    - each node can have more than one reference, unlike linked lists 
+    - lists are linear, however, trees are nonlinear (they branch)
+    - you can have a node pointing to a sibling, or a sibling pointing to a child, all nodes must point down or away from the single root from parent to child
+    - vocab
+        -root: the top node in a tree
+        -child: a node directly connected to another ndoe when moving away from the root
+        -Parent: the converse notion of a child
+        -siblings: a group of nodes with the same parent
+        -leaf: a node with no children
+        -edge: the connection between one node and another
+    
+----------------------------------------------------------------------------------------------------------
