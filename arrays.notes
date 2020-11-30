@@ -1,0 +1,53 @@
+Arrays 
+    1D array ex.
+
+        let activities = [];
+
+    2D array ex.
+
+        //the first dimension represents the activity and the second one shows the number of hours spent per day for each
+        let activities = [
+            ['Work', 9],
+            ['Eat', 1],
+            ['Commute', 2],
+            ['Play Game', 1],
+            ['Sleep', 7]
+        ];
+
+        //to show the activities array in the console:
+        console.table(activities);
+
+        //the following illustrates the output of the console
+        ┌─────────┬─────────────┬───┐
+        │ (index) │      0      │ 1 │
+        ├─────────┼─────────────┼───┤
+        │    0    │   'Work'    │ 9 │
+        │    1    │    'Eat'    │ 1 │
+        │    2    │  'Commute'  │ 2 │
+        │    3    │ 'Play Game' │ 1 │
+        │    4    │   'Sleep'   │ 7 │
+        └─────────┴─────────────┴───┘
+
+        Note that the (index) column is for the illustration that indicates the indices of the inner array.
+
+        To access an element of the multidimensional array, you first use square brackets to access an element of the outer array that returns an inner array; and then use another square bracket to access the element of the inner array.
+
+        The following example returns the second element of the first inner array in the activities array above:
+        console.log(activities[0][1]); // 9
+
+    3D Array ex. 
+        3d_array = [
+            [
+                [1,2,3,4],
+                [5,6,7,8]
+            ],
+            [
+                [9,10,11,12],
+                [13,14,15,16]
+            ]
+        ]
+        //to gain access to the inner Arrays...
+            3d_array[0] // is a two-dim array
+            3d_array[0][1] // is a one-dim array
+            3d_array[0][1][0] // is a value
+----------------------------------------------------------------------------------------------------------
