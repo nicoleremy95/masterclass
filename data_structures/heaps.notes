@@ -10,5 +10,5 @@ Binary Heaps
             - there are no guarantees between sibling nodes (no implied ordering between siblings like a binary search tree)
             - is as compact as possible. All the children of each node are as full as they can be and left children are always filled out first
             - there is no order or relationship like binary search trees
-        - used to implement priorty queues
+        - used to implement priorty queues and graph traversal algorithms
 ----------------------------------------------------------------------------------------------------------
