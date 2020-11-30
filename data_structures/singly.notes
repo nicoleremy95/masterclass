@@ -1,0 +1,7 @@
+Singly Linked Lists 
+    - data structure
+    - ordered
+    - an array is indexed, however, a linked list has no nodes
+    - contains a head, tail, and length property
+    - consists of nodes and each node has a value and a pointer to another node or null
+----------------------------------------------------------------------------------------------------------
