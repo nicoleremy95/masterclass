@@ -35,6 +35,7 @@ Arrays
         The following example returns the second element of the first inner array in the activities array above:
         console.log(activities[0][1]); // 9
 
+        ** information from https://www.javascripttutorial.net/javascript-multidimensional-array/
     3D Array ex. 
         3d_array = [
             [
