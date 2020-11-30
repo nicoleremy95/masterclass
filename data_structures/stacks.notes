@@ -1,0 +1,8 @@
+Stacks 
+
+    - stacks are a collection of data that operate by LIFO (last in first out) 
+        - think of a stack of books, you add the books on top of each other and take the top one off first
+    - Call Stack 
+    - used in undo and redo functionality, managing function invocations, Routing (the history object like in React)
+    - 
+----------------------------------------------------------------------------------------------------------
