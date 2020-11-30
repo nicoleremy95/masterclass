@@ -1,12 +1,13 @@
 Binary Trees
 
     - each node can have at most two children
+    - 
+----------------------------------------------------------------------------------------------------------
+Binary Search Trees
+
+    - each node can have at most two children
     - used to store data that can be compared and sorted
     - typically numbers, but could be strings
     - all numbers less than node are on the left side of the tree and all numbers greater than the node are on the right side of the tree
     -    
-----------------------------------------------------------------------------------------------------------
-Binary Search Trees
-
-    - 
 ----------------------------------------------------------------------------------------------------------

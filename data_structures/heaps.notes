@@ -1,0 +1,14 @@
+Binary Heaps
+
+    - another category of trees
+    - binary heaps 
+        - in a maxBinaryHeap, parent nodes are always larger than child nodes
+            - there are no guarantees between sibling nodes (no implied ordering between siblings like a binary search tree)
+            - is as compact as possible. All the children of each node are as full as they can be and left children are always filled out first
+            - there is no order or relationship like binary search trees
+        - in a MinBinaryHeap, the parent nodes are always smaller than the children nodes
+            - there are no guarantees between sibling nodes (no implied ordering between siblings like a binary search tree)
+            - is as compact as possible. All the children of each node are as full as they can be and left children are always filled out first
+            - there is no order or relationship like binary search trees
+        - used to implement priorty queues
+----------------------------------------------------------------------------------------------------------
