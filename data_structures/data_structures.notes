@@ -7,7 +7,7 @@ DATA STRUCTURES
     - the syntax (making a pattern for new information to be added)
         ex.
         class Student {
-            constructur(firsName, lastName, year){
+            constructor(firsName, lastName, year){
                 this.firstName = firstName;
                 this.lastName = lastName;
                 this.year = year;
