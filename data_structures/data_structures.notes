@@ -22,9 +22,13 @@ DATA STRUCTURES
         --the class keyword creates a constant, so you can not redefine it
     - instance methods
 ----------------------------------------------------------------------------------------------------------
+Basic Structure of Classes in relation to Data structures
 
-
-
-
-
-Graph Traversal
+class DataStructure(){
+    constructor(){
+        //what default properties should it have?
+    }
+    someInstanceMethod(){
+        //what should each object  created from this class be able to do?
+    }
+}
