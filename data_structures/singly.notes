@@ -11,9 +11,11 @@ Singly Linked Lists
     - this are better at insertion and deletion because you don't have to re-index and therefore takes less memory
 ----------------------------------------------------------------------------------------------------------
 METHODS
-    pop - removing a node from the end of the linked list 
-
-
+    push    -
+    pop     - removing a node from the end of the linked list 
+    shift   - removing a node (the head) from the beginning of the list 
+            - it takes constant time O(1) because you don't have to re index like arrays 
+    unshift - adding a new node to the beginning of the linked list 
 ----------------------------------------------------------------------------------------------------------
 Example of a class constructor for a node
 

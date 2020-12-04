@@ -66,6 +66,49 @@ class SinglyLInkedList{
         }
         return current; 
     }
+
+    //SHIFTING PSEUDOCODE
+        //if there are no nodes, return undefined
+        //store the current head property in a variable
+        //set the head property to be the current head's next property
+        //decrement the length by 1
+        //return the value of the node removed 
+        shift(){
+            if(!this.head){
+                return undefined;
+            }
+            var currentHead = this.head;
+            this.head = currentHead.next;
+            this.length --;
+            if(this.length === 0){
+                this.tail = null;
+            }
+            return currentHead;
+        }
+    
+    //UNSHIFT PSEUDOCODE
+        //this function should accept a value
+        //create a new node using the value passed to the function
+        //if there is no head property on the list, set the head and tail to be the newly created node
+        //otherwise set the newly created node's next property to be the current head property on the list
+        //set the head property on the list to be that newly created node
+        //increment the length by 1;
+        //return new list;
+
+        unshift(val){
+            var newNode = new Node(val);
+            
+            if(!this.head){
+                this.head = newNode;
+                this.tail = newNode;
+            } else{
+                newNode.next = this.head;
+                this.tail = this.head;
+            }
+           
+            this.length ++;
+            return this;
+        }
 }
 
 
