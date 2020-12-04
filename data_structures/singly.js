@@ -125,6 +125,54 @@ class SinglyLInkedList{
             }
             return current;
         }
+        //SET PSEUDOCODE
+            //accept a value and an index
+            //use the get function to find the specific node
+            //if the node is not found, return false
+            //if the node is found, set the value of that node to be the value passed to the function and return true
+        set(index, val){
+            var foundNode = this.get(index)
+            if(foundNode){
+                foundNode.val = val;
+                return true;
+            }
+            
+            return false;
+        }
+
+        //INSERT PSEUDOCODE
+            //takes in index and value
+            //if index is less than zero or greater than the length, return flase
+            //if the index is the same as the length, push a new node to the end of the list
+            //if the index is 0, unshft a new node to the start of the list
+            //otherwise, using get method, access the node at the index -1
+            //set the next property on that node to be the new node
+            //est the next property ont he new node to be the previous next
+            //increment the length
+            //return true
+        insert(index, val){
+            if(index < 0 || index > this.length){
+                return false;
+            }
+            if(index === this.length){
+                 this.push(val);
+                 return true;
+            }
+            if(index === 0){
+                this.unshift(val)
+                return true;
+            }
+            //create new node 
+            var newNode = new Node(val)
+            var previous = this.get(index-1);
+
+            var temp = previous.next;
+            previous.next = newNode;
+            newNode = temp;
+            this.length ++;
+            return true;
+            
+        }
 }
 
 

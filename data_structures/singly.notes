@@ -14,10 +14,12 @@ METHODS
     push    -
     pop     - removing a node from the end of the linked list 
     shift   - removing a node (the head) from the beginning of the list 
-            - it takes constant time O(1) because you don't have to re index like arrays 
+            - it takes constant time O(1) because you don't have to re  index like arrays 
     unshift - adding a new node to the beginning of the linked list
     get     - retrieve a node by it's position in the linked list 
             - there are no indecies therefore you have to go through each item starting at the beginning, not as efficient as an array
+    set     - changing the value of a node based on it's position in the linked list
+    insert  - adding a node to the linked list at a specific position
 ----------------------------------------------------------------------------------------------------------
 Example of a class constructor for a node
 
