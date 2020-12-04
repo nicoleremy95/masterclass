@@ -164,14 +164,42 @@ class SinglyLInkedList{
             }
             //create new node 
             var newNode = new Node(val)
+            //define previous node 
             var previous = this.get(index-1);
-
+            //set the node that will come after the new node
             var temp = previous.next;
             previous.next = newNode;
             newNode = temp;
+            //increase the length
             this.length ++;
             return true;
             
+        }
+
+        //REMOVE PSEUDOCODE
+            //if the index is less than zero or greater than the length, return undefined
+            //if the index is the same as the length -1, pop method
+            //if the index is 0, shift method
+            //otherwise, using the get method, access the node at the index -1
+            //set the next property on that node to be the next of the next node
+            //decrement the length
+            //return the value of the node removed
+        remove(index){
+            if(index < 0 || index > this.length){
+                return undefined;
+            }
+            if(index === length -1 ){
+                this.pop()
+            }
+            if(index === 0){
+                this.shift()
+            }
+            var previous = this.get(index -1);
+            var removed = previous.next;
+            previous.next = removed.next;
+            this.length --;
+            return removed
+
         }
 }
 

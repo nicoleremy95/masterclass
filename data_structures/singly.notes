@@ -20,6 +20,7 @@ METHODS
             - there are no indecies therefore you have to go through each item starting at the beginning, not as efficient as an array
     set     - changing the value of a node based on it's position in the linked list
     insert  - adding a node to the linked list at a specific position
+    remove  - remove a node from the linked list at a specific position
 ----------------------------------------------------------------------------------------------------------
 Example of a class constructor for a node
 
