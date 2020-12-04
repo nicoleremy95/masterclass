@@ -27,5 +27,28 @@ function maxSubArrSum(arr, num) {
   
 //Sliding Window Approach, O(n)
 function maxSubArrSum(arr, num){
+    let maxSum = 0;
+    let tempSum = 0;
+
+    //edge case: if the array has less numbers than the consecutive parameter, return null
+    if(arr.length < num){
+        return null;
+    }
+
+    //add the first round of integers together
+    for(let i = 0; i < num; i ++){
+        maxSum += arr[i];
+    }
+
+    //run a for loop that adds the next index but removes the very first index
+    tempSum = maxSum;
+    for (let i = num; i < arr.length; i++){
+        tempSum = tempSum - arr[i-num] + arr[i];
+        //make the new maxSum the calculated tempSum if it is larger
+        if(tempSum > maxSum){
+            maxSum = tempSum;
+        }
+    }
+    return maxSum;
 
 }
