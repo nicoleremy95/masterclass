@@ -10,4 +10,26 @@ Singly Linked Lists
     - random access is not allowed, you have to traverse from the beginning (like an elevator)
     - this are better at insertion and deletion because you don't have to re-index and therefore takes less memory
 ----------------------------------------------------------------------------------------------------------
+METHODS
+    pop - removing a node from the end of the linked list 
+
+
+----------------------------------------------------------------------------------------------------------
+Example of a class constructor for a node
+
+//define a class for each node
+//piece of data -val
+//reference to next node - next
+
+class Node{
+    constructor(val){
+        this.val = val;
+        this.next = null;
+    }
+}
+
+// var first = new Node("Hi")
+// first.next = new Node ("there")
+// first.next.next = new Node ("buddy")
+// first.next.next.next = new Node ("!")
 
