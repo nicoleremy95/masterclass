@@ -3,6 +3,12 @@ Doubly Linked Lists
     - linear
     - almost identical to singly linked lists, however, every node has another pointer to the previous node (operates in both directions)
     - more efficient than singly linked lists because you can work backwards on the list which makes popping off the last value much easier
-    - more flexibility than sinlgy linked lists, but as a result it takes more memory. 
+    - more flexibility than sinlgy linked lists, but as a result it takes more memory than sinlgy lists. 
 ----------------------------------------------------------------------------------------------------------
-
+    BIG O
+    
+    ACTION            BIG O SINGLY LINKED LISTS          BIG O DOUBLY LINKED LISTS 
+    insertion         O(1)                                      O(1)
+    removal           O(1), or O(n) worst case                  O(1)
+    searching         O(n)                                      O(n) (however, it is more optimized; O(n/2))
+    access            O(n)                                      O(n)

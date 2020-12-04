@@ -66,17 +66,17 @@ const { runInThisContext } = require("vm");
         }
         shift(){
             if(this.length === 0) return undefined;
-        var oldHead = this.head;
-        if(this.length === 1){
-            this.head = null;
-            this.tail = null;
-        }else{
-            this.head = oldHead.next;
-            this.head.prev = null;
-            oldHead.next = null;
-        }
-        this.length--;
-        return oldHead;
+            var oldHead = this.head;
+            if(this.length === 1){
+                this.head = null;
+                this.tail = null;
+            }else{
+                this.head = oldHead.next;
+                this.head.prev = null;
+                oldHead.next = null;
+            }
+            this.length--;
+            return oldHead;
         }
         unshift(val){
             var newNode = new Node(val);
@@ -123,7 +123,7 @@ const { runInThisContext } = require("vm");
         }
 
         insert(index, val){
-            var newNode = new Node(val)
+          
             if(index < 0 || index > this.length){
                 return false;
             }
@@ -135,16 +135,44 @@ const { runInThisContext } = require("vm");
                 this.push(val);
                 return true;
             }
+
+            var newNode = new Node(val)
             var beforeNode = this.get(index -1);
             var afterNode = beforeNode.next;
             if(beforeNode){
                 beforeNode.next = newNode;
                 newNode.prev = beforeNode;
+
                 newNode.next = afterNode;
                 afterNode.prev = newNode;
             }
             this.length ++;
             return true;
+        }
+        remove(index){
+            if(!index < 0 || index >= this.length){
+                return false;
+            }
+            if(index === 0){
+                this.shift();
+                return true;
+            }
+            if(index === this.length -1){
+                this.pop();
+                return true;
+            }
+            var removed = this.get(index);
+            var beforeRemoved = removed.prev;
+            var afterRemoved = removed.next; 
+            if(removed){
+                removed.next = null;
+                removed.prev = null;
+
+                beforeRemoved.next = afterRemoved;
+                afterRemoved.prev = beforeRemoved;
+            }
+            this.length --;
+            return removed.val;
         }
       
     }
