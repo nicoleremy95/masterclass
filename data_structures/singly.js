@@ -97,7 +97,7 @@ class SinglyLInkedList{
 
         unshift(val){
             var newNode = new Node(val);
-            
+
             if(!this.head){
                 this.head = newNode;
                 this.tail = newNode;
@@ -108,6 +108,22 @@ class SinglyLInkedList{
            
             this.length ++;
             return this;
+        }
+        //GET PSEUDOCODE
+            //accept an index
+            //if the index is less than zero or greater than or equal to the length of the list, return null
+            //loop through the list until you reach the index and return the node at that specific index
+        get(index){
+            if(index < 0 || index >= this.length){
+                return null;
+            }
+            var current = this.head;
+            var counter = 0;
+            while(counter !== index){
+                current = current.next 
+                counter ++;
+            }
+            return current;
         }
 }
 
