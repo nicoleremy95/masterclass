@@ -2,6 +2,8 @@
     //val
     //next
 
+const { runInThisContext } = require("vm");
+
 
     //prev
     class Node{
@@ -94,36 +96,58 @@
             return this;
         }
         get(index){
-
-            if(!this.length === 0){
-                return null;
-            }
-            if(index < 0 || index >= this.length){
-                return null;
-            }
-            var middle = Math.floor(this.length/2)
-            var count;
-            var current; 
-            if(index >= middle){
-                //start from the tail 
-                //traverse
-                current = this.tail;
+            if(index < 0 || index >= this.length) return null;
+            var count, current;
+            if(index <= this.length/2){
                 count = 0;
-                while (count !== index){
+                current = this.head;
+                while(count !== index){
+                    current = current.next;
+                    count++;
+                }
+            } else {
+                count = this.length - 1;
+                current = this.tail;
+                while(count !== index){
                     current = current.prev;
                     count--;
                 }
-            } else{
-                //start from the head
-                //traverse  
-                current = this.head
-                count = this.length -1
-                while(count !== index){
-                    current = current.next;
-                    count ++;
-                } 
             }
-            return current; 
+            return current;
+        }
+
+        set(index, val){
+            var newValue = this.get(index);
+            if(newValue){
+                newValue.val = val;
+                return true;
+            }
+            return false;
+        }
+
+        insert(index, val){
+            var newNode = new Node(val)
+            if(index < 0 || index > this.length){
+                return false;
+            }
+            if(index === 0){
+                this.unshift(val);
+                return true;
+            }
+            if(index === this.length){
+                this.push(val);
+                return true;
+            }
+            var beforeNode = this.get(index -1);
+            var afterNode = beforeNode.next;
+            if(beforeNode){
+                beforeNode.next = newNode;
+                newNode.prev = beforeNode;
+                newNode.next = afterNode;
+                afterNode.prev = newNode;
+            }
+            this.length ++;
+            return true;
         }
       
     }
