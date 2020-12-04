@@ -10,3 +10,4 @@ Singly Linked Lists
     - random access is not allowed, you have to traverse from the beginning (like an elevator)
     - this are better at insertion and deletion because you don't have to re-index and therefore takes less memory
 ----------------------------------------------------------------------------------------------------------
+
