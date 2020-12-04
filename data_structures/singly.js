@@ -1,9 +1,18 @@
+//Node
+    //val
+    //next
 class Node{
     constructor(val){
         this.val = val;
         this.next = null;
     }
 }
+
+//SinglyLInkedList
+    //length
+    //head
+    //tail
+    
 class SinglyLInkedList{
     constructor(){
         this.length = 0;
@@ -200,6 +209,40 @@ class SinglyLInkedList{
             this.length --;
             return removed
 
+        }
+        //REVERSE PSEUDOCODE
+            //Swap the head and tail
+            //create a vaiable called next
+            //create a variable called prev
+            //create a variable called node and initialize it to the head property
+            //loop through the list
+            //set next to be the next property on whatever node is
+            //set the next property on the node to be whatever prev is
+            //set prev to be the value of the node variable
+            //set the node variable to be the value of the next variable
+        reverse(){
+            var node = this.head;
+            this.head = this.tail;
+            this.tail = node;
+            var next;
+            var prev = null;
+            for(let i = 0; i < this.length; i ++){
+                next = node.next;
+                node.next = prev;
+                prev = node;
+                node = next;
+            }
+            return this;
+        }
+        //use this method to print values in an array
+        print(){
+            var arr= [];
+            var current = this.head
+            while(current){
+                arr.push(current.val)
+                current = current.next;
+            }
+            console.log(arr);
         }
 }
 

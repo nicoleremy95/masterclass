@@ -5,3 +5,4 @@ Doubly Linked Lists
     - more efficient than singly linked lists because you can work backwards on the list which makes popping off the last value much easier
     - more flexibility than sinlgy linked lists, but as a result it takes more memory. 
 ----------------------------------------------------------------------------------------------------------
+
