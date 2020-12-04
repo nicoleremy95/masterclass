@@ -2,7 +2,6 @@
     //val
     //next
 
-const { runInThisContext } = require("vm");
 
     //prev
     class Node{
@@ -94,6 +93,39 @@ const { runInThisContext } = require("vm");
             this.length ++;
             return this;
         }
+        get(index){
+
+            if(!this.length === 0){
+                return null;
+            }
+            if(index < 0 || index >= this.length){
+                return null;
+            }
+            var middle = Math.floor(this.length/2)
+            var count;
+            var current; 
+            if(index >= middle){
+                //start from the tail 
+                //traverse
+                current = this.tail;
+                count = 0;
+                while (count !== index){
+                    current = current.prev;
+                    count--;
+                }
+            } else{
+                //start from the head
+                //traverse  
+                current = this.head
+                count = this.length -1
+                while(count !== index){
+                    current = current.next;
+                    count ++;
+                } 
+            }
+            return current; 
+        }
+      
     }
 
     var list = new DoublyLinkedList()
