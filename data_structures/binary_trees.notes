@@ -4,10 +4,14 @@ Binary Trees
    
 ----------------------------------------------------------------------------------------------------------
 Binary Search Trees
-
+    - works on sorted data
     - each node can have at most two children
     - used to store data that can be compared and sorted
     - typically numbers, but could be strings
     - all numbers less than node are on the left side of the tree and all numbers greater than the node are on the right side of the tree
-    -    
+        - every node to the left of a parent is always less than the parent
+        - every node to the right of a parent node is always greater than the parent  
+    - BIG 0
+        -insertion O(log n)
+        -searching O(log n)
 ----------------------------------------------------------------------------------------------------------
