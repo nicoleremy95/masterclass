@@ -4,5 +4,9 @@ Stacks
         - think of a stack of books, you add the books on top of each other and take the top one off first
     - Call Stack 
     - used in undo and redo functionality, managing function invocations, Routing (the history object like in React)
-    - 
+    - Array Implementation: 
+        - you can create an array and used push and pop methods to bring about stack like functionality.
+        - you can create an array and use shift and unshift to bring about stack like functionality, however, it will take up a lot of space because you have to reindex everything
+    - Linked List Implementation
+        - 
 ----------------------------------------------------------------------------------------------------------
