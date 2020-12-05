@@ -1,0 +1,13 @@
+QUEUES
+
+    - FIRST IN FIRST OUT, FIFO
+    - used in background tasks, uploading resources (waiting for things to upload), waiting in a line, printing queue(printing can only happen one at a time, whoever prints first will receive their papers first )
+    - you can implement with an array or a linked list 
+    - you can do push combined with shift, however, this involves reindexing
+    - you can do unshift combined with pop, this is more efficient 
+    - queues are useful for processing tasks and are foundational for more complex data structures
+    BIG O 
+        insertion O(1)
+        removal O(1)
+        searching O(n)
+        access O(n)
