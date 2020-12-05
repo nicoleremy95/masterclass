@@ -3,10 +3,16 @@ Stacks
     - stacks are a collection of data that operate by LIFO (last in first out) 
         - think of a stack of books, you add the books on top of each other and take the top one off first
     - Call Stack 
-    - used in undo and redo functionality, managing function invocations, Routing (the history object like in React)
+    - used in undo and redo functionality, managing function invocations, undo/redo, Routing (the history object like in React)
+    - not native to Javascript, but easy to implement
     - Array Implementation: 
         - you can create an array and used push and pop methods to bring about stack like functionality.
         - you can create an array and use shift and unshift to bring about stack like functionality, however, it will take up a lot of space because you have to reindex everything
     - Linked List Implementation
-        - 
+        - best to use this for a lot of data because you don't have to reindex
+    -BIG O
+        insertion - O(1)
+        removal O(1)
+        searching O(n)
+        access O(n)
 ----------------------------------------------------------------------------------------------------------

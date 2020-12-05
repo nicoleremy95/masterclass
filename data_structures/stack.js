@@ -1,4 +1,5 @@
-//Stacks using singly linked lists 
+//Stacks using singly linked lists. We add and remove from the beginning because it takes constant time O(1), whereas adding and removing from the end means we must traverse the whole list creating O(n) time complexity
+
 class Node{
     constructor(){
         this.val = val;
@@ -12,6 +13,7 @@ class Stack{
         this.last = null;
         this.size = 0;
     }
+    //this is similar to the unshift method 
     push(val){
         var newNode = new Node(val)
         if(!this.first){
@@ -24,6 +26,7 @@ class Stack{
         }
         return this.size ++; 
     }
+    //this is similar to the shift method
     pop(){
         if(this.size === 0){
             return null;
