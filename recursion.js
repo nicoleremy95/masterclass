@@ -47,4 +47,39 @@ sumRange(3) // 6
         return num * factorial(num-1)
     }
     factorial(5)
+ 
     
+//RECURSION
+//an outer function that calls an inner function that is recursive
+function collectOddValues(arr){
+    let result = [];
+    function helper(helperInput){
+        if(helperInput.length === 0){
+            return;
+        }
+        if(helperInput[0] % 2 !==0){
+            result.push(helperInput[0])
+        }
+        helper(helperInput.slice(1))
+    }
+    helper(arr)
+
+    return result;
+}
+
+//PURE RECURSION
+    //tips: for arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them. remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings. To make copies of objects use the Object.assign, or the spread operator
+    function collectOddValues(arr){
+        let newArr = [];
+
+        if(arr.length === 0){
+            return newArr;
+        }
+
+        if(arr[0] % 2 !== 0){
+            newArr.push(arr[0])
+        }
+
+        newArr = newArr.concat(collectOddValues(arr.slice(1)));
+        return newArr;
+    }

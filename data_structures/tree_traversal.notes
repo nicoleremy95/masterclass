@@ -1,4 +1,8 @@
 Tree Traversal
 
-    - 
+    - two ways: 1) breadth-first search (going across)
+                2) depth first search 
+                    1) in order
+                    2) pre order
+                    3) post order
 ----------------------------------------------------------------------------------------------------------
