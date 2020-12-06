@@ -2,7 +2,18 @@ Tree Traversal
 
     - two ways: 1) breadth-first search (going across)
                 2) depth first search 
-                    1) in order
-                    2) pre order
-                    3) post order
+                    1) in order (left, root, right)
+                    2) pre order (root, left, right)
+                    3) post order (left, right , root)
+
+    BFS v. DFS
+    - adding values to a queue and the queue grows, even though at the end the queue is emtpy, however, you still have to store the values so BFS takes up more space depending on size of tree 
+    - if the tree is wider, DFS would take up less space (less space complexity, less memory)
+    - if the tree is long or deep, BFS would take up less space
+    - time complexity for BFS and DFS is the same
+
+    Comparing in order, pre order, post order
+        - in order gives you a list that is already ordered
+        - pre order gives you the root first so you know what the root is 
+        - 
 ----------------------------------------------------------------------------------------------------------

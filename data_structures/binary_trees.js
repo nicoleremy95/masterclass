@@ -94,7 +94,7 @@ class binarySearchTree{
         return data;
     }
 
-    DFSPreOrder(){
+    DFSPreOrder(){ //Depth First Search
         var data = [];
 
         function traverse(node){
@@ -110,7 +110,8 @@ class binarySearchTree{
         traverse(this.root);
         return data;
     }
-    DFSPostOrder(){
+    DFSPostOrder(){ //Depth First Search
+            //go to the left and look at the last children first, and then go up to the parent. once the left side is done do this on the right, and then check the root last
         let data = [];
         function traverse(node){
             if(node.left) traverse(node.left);
@@ -120,7 +121,18 @@ class binarySearchTree{
         traverse(this.root)
         return data;
     }
-    //go to the left and look at the last children first, and then go up to the parent. once the left side is done do this on the right, and then check the root last
+
+    DFSInOrder(){ //Depth First Search
+        //visit the entire left side, then the root, then the entire right side
+        let data = [];
+        function traverse(node){
+            if(node.left) traverse(node.left)
+            data.push(node.val);
+            if(node.right) traverse(node.right)
+        }
+        traverse(this.root);
+        return data;
+    }
 }
 
 var tree = new binarySearchTree();
