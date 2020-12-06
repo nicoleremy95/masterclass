@@ -3,7 +3,7 @@ Binary Heaps
     - another category of trees
     - binary heaps 
         - each parent can only have two children
-        - is always as compact as possible, all of the left children are filled in before the right2f
+        - is always as compact as possible, all of the left children are filled in before the right
         - no implied order between children unlike binary search trees
         - in a maxBinaryHeap, parent nodes are always larger than child nodes, the root is the biggest value
             - there are no guarantees between sibling nodes (no implied ordering between siblings like a binary search tree)
@@ -23,3 +23,15 @@ Relationship of Binary Heaps: Parent and child
     - for any child node at index n... (to find the parent of the child)
         - its parent is at index Math.floor((n-1)/2)    Math.floor takes off the decimal
     * because of these relationships, when you use different methods on the Binary Heap class, you don't have to use left node and right node, but rather the relationships between the parents and children in the array
+
+    ----------------------------------------------------------------------------------------------------------
+PRIORITY queues 
+    - A data structure where each element has a priority. elements with higher priorities are served before elements  with lower priorities. 
+        -similar to triage
+    - if you wanted to implement a priority queue on an unordered list or array, it would have O(n) time complexity, if we use a heap, it is much faster
+   ----------------------------------------------------------------------------------------------------------
+BIG 0
+    -insertion O(log n) best and worst case
+    -removal O(log n) best and worst case
+    -search O(n), but depends on the number we are looking for
+    -
