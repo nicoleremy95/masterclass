@@ -11,7 +11,15 @@ Binary Search Trees
     - all numbers less than node are on the left side of the tree and all numbers greater than the node are on the right side of the tree
         - every node to the left of a parent is always less than the parent
         - every node to the right of a parent node is always greater than the parent  
-    - BIG 0
-        -insertion O(log n)
-        -searching O(log n)
+    - BIG 0 
+        -insertion O(log n) (best case)
+        -searching O(log n) (best case)
+        - as the number of nodes double, we only increase the number of steps to insert/find by 1
+        - as the number of nodes quadruple (4x), the number of extra steps to insert/find is 2
+        - as the number of nodes (8x), the number of extra steps to insert/find is 3
+            ex.     //      10                              10
+                    //  5       13                  5               13
+                    //2   6   11    15          2        6       11       15
+                    //                      1   3    4     7  9    12  14   22 
+
 ----------------------------------------------------------------------------------------------------------

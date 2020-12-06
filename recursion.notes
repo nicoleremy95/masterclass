@@ -1,0 +1,18 @@
+RECURSION
+    - a process (a function in our case) that calls itself
+    - examples: JSON.parse/JSON.stringify, document.getElementById and DOM traversal algorithms, object traversal, 
+    - can be a cleaner alternative to iteration
+    - when we write recursive functions, we keep pushing new functions onto the call stack
+    - how they work: 
+        - invoke the same function with a different input until you reach the base case
+            - the base base is where the recursion ends 
+    - most important parts : the base case, the different inputs 
+    Call Stack 
+        - as functions are added to a call stack, they go through through a LIFO just like a stack. They are added on top of each other, and then the last one added is the first one executed
+        - functions are pushed on and popped off 
+* what tool does javascript use to manage function invocations?
+    - the call stack
+* What is a base case?
+    - a situation when the recursion ends 
+
+- Stack Overflow - typically a recursive call that doesn't have a base case or forgetting to return a value 
