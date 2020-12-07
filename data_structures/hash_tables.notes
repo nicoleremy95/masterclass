@@ -16,4 +16,13 @@ Hash Tables
             - doesn't cluster outputs at specific indicies, but distributes them uniformily
             - deterministic(same input yields same output)
         - using a prime number for the length means you will have less collisions, which is a great thing
+    Handling collisions
+        -Separate Chaining - store multiple key value pairs at the same index in a nested data structure (ex. an array in an array)
+            - you can store more key value pairs than the predetermined length of the array 
+        -Linear Probing - you only store one key value pair at an index, and if there is already a value, you look to the next index and if it is null, store it there, and so on
 ----------------------------------------------------------------------------------------------------------
+
+BIG O
+    -insert O(1)
+    -deletion O(1)
+    -access O(1)
