@@ -8,4 +8,12 @@ Hash Tables
         - Javascript: Objects and Maps (objects have some restrictions, but are basically hash tables)
         - Java, Go, & Scala: Maps
         - Ruby: Hashes
+    - for our purposes, to implement a hash table, we will be using an arry. in order to look up values by key, we need a way to convert keys into valid array indicies. a function that performs this task is called a HASH FUNCTION
+    
+    HASH FUNCTION
+        - what makes a good hash function?
+            - fast(constant time)
+            - doesn't cluster outputs at specific indicies, but distributes them uniformily
+            - deterministic(same input yields same output)
+        - using a prime number for the length means you will have less collisions, which is a great thing
 ----------------------------------------------------------------------------------------------------------

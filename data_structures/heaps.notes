@@ -14,6 +14,7 @@ Binary Heaps
             - is as compact as possible. All the children of each node are as full as they can be and left children are always filled out first
             - there is no order or relationship like binary search trees
         - used to implement priorty queues and graph traversal algorithms
+        - we can store them in an array instead of lists with nodes
 ----------------------------------------------------------------------------------------------------------
 
 Relationship of Binary Heaps: Parent and child 
