@@ -54,6 +54,22 @@ class HashTable{
           }
           return valuesArr;
       }
+
+      //loop over hash table and extract  all keys 
+      keys(){
+          let keysArr = [];
+          for(let i =0; i < this.keyMap.length; i ++){
+              if(this.keyMap[i]){
+                  for(let j = 0; j < this.keyMap[i].length; j++){
+                      //if the value doesn't already exist in the keysArr, then include it. if there is already this value in the keysArr, then don't include it 
+                      if(!keysArr.includes(this.keyMap[i][j][0])){
+                        keysArr.push(this.keyMap[i][j][0])
+                      }
+                  }
+              }
+          }
+          return keysArr;
+      }
 }
 
 let ht = new HashTable();
