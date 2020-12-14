@@ -5,10 +5,10 @@ Singly Linked Lists
     - an array is indexed, however, a linked list has no indexes
     - contains a head, tail, and length property
     - consists of nodes and each node has a value and a pointer to another node or null
-    - the length is the number of elements, unlike arrays which is the number of elements minus 1
+    - the length is the number of elements
     - each node is connected to the next node only in one direction
     - random access is not allowed, you have to traverse from the beginning (like an elevator)
-    - this are better at insertion and deletion because you don't have to re-index and therefore takes less memory
+    - these are better at insertion and deletion because you don't have to re-index and therefore takes less memory
 ----------------------------------------------------------------------------------------------------------
 METHODS
     push    -
